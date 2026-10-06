@@ -1,75 +1,78 @@
-/* ===== COLOR PALETTE — Coffee Shop Theme =====
-   Dark Brown:   #2A1A0E
-   Burnt Orange: #D4621A
-   Golden Amber: #F4AE52
-   Cream:        #FEF3E2
-================================================ */
+/* ===== NEW — Lab 4 Enhancements ===== */
 
-:root {
-  --dark-brown: #2A1A0E;
-  --burnt-orange: #D4621A;
-  --golden-amber: #F4AE52;
-  --cream: #FEF3E2;
+/* Charts */
+.chart-container {
+  position: relative;
+  height: 280px;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
-body {
-  background-color: var(--cream);
-  font-family: 'Segoe UI', Roboto, sans-serif;
-}
-
-/* Login Card */
-.login-card {
+/* Filter Controls */
+.filter-bar {
   background-color: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 8px 24px rgba(42, 26, 14, 0.15);
-}
-
-.btn-coffee {
-  background-color: var(--burnt-orange);
-  color: white;
-  border: none;
-}
-.btn-coffee:hover {
-  background-color: var(--dark-brown);
-  color: var(--golden-amber);
-}
-
-/* Navbar */
-.navbar-coffee {
-  background-color: var(--dark-brown);
-}
-.navbar-coffee .nav-link,
-.navbar-coffee .navbar-brand {
-  color: var(--cream) !important;
-}
-.navbar-coffee .nav-link:hover {
-  color: var(--golden-amber) !important;
-}
-
-/* Cards */
-.card {
-  border: none;
   border-radius: 0.75rem;
-  box-shadow: 0 4px 12px rgba(42, 26, 14, 0.08);
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(42, 26, 14, 0.06);
   margin-bottom: 1.5rem;
 }
-.card-header {
-  background-color: var(--burnt-orange);
-  color: white;
-  font-weight: 600;
+.filter-bar .form-control,
+.filter-bar .form-select {
+  border-radius: 0.5rem;
+  border: 1px solid var(--golden-amber);
 }
 
-/* Stats */
-.stat-number {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--burnt-orange);
-}
-
-/* Footer */
-footer {
+/* Inventory Table */
+.table thead {
   background-color: var(--dark-brown);
   color: var(--cream);
-  padding: 1rem 0;
-  margin-top: 2rem;
+}
+.table th, .table td {
+  vertical-align: middle;
+}
+
+/* Stock Status Badges */
+.badge-instock { background-color: #198754; color: white; }
+.badge-lowstock { background-color: #d97706; color: white; }
+.badge-outofstock { background-color: #dc2626; color: white; }
+
+/* Low Stock Alert Banner */
+.low-stock-alert {
+  background-color: #fff7ed;
+  border-left: 4px solid #d97706;
+  color: #92400e;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Action Buttons */
+.btn-export {
+  background-color: var(--golden-amber);
+  color: var(--dark-brown);
+  font-weight: 600;
+}
+.btn-export:hover {
+  background-color: var(--burnt-orange);
+  color: white;
+}
+
+/* Live Indicator */
+.live-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #198754;
+}
+.live-dot {
+  width: 10px; height: 10px;
+  background-color: #198754;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
 }
