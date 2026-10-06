@@ -1,0 +1,75 @@
+/* ===== COLOR PALETTE — Coffee Shop Theme =====
+   Dark Brown:   #2A1A0E
+   Burnt Orange: #D4621A
+   Golden Amber: #F4AE52
+   Cream:        #FEF3E2
+================================================ */
+
+:root {
+  --dark-brown: #2A1A0E;
+  --burnt-orange: #D4621A;
+  --golden-amber: #F4AE52;
+  --cream: #FEF3E2;
+}
+
+body {
+  background-color: var(--cream);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Login Card */
+.login-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(42, 26, 14, 0.15);
+}
+
+.btn-coffee {
+  background-color: var(--burnt-orange);
+  color: white;
+  border: none;
+}
+.btn-coffee:hover {
+  background-color: var(--dark-brown);
+  color: var(--golden-amber);
+}
+
+/* Navbar */
+.navbar-coffee {
+  background-color: var(--dark-brown);
+}
+.navbar-coffee .nav-link,
+.navbar-coffee .navbar-brand {
+  color: var(--cream) !important;
+}
+.navbar-coffee .nav-link:hover {
+  color: var(--golden-amber) !important;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(42, 26, 14, 0.08);
+  margin-bottom: 1.5rem;
+}
+.card-header {
+  background-color: var(--burnt-orange);
+  color: white;
+  font-weight: 600;
+}
+
+/* Stats */
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--burnt-orange);
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark-brown);
+  color: var(--cream);
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
